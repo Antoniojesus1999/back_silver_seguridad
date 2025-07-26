@@ -19,6 +19,19 @@
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Dockerized 🐳_-blue.svg" alt="docker"/></a>
 </p>
 
+## Para los mensajes de commit hay que usar estas convecciones
+
+feat: Para agregar una nueva funcionalidad.
+fix: Para corregir un error/bug.
+docs: Cambios en la documentación.
+style: Cambios de formato, sin afectar el código (espacios, comas, etc.).
+refactor: Refactorización del código, sin cambios de funcionalidad ni corrección de bugs.
+test: Cambios o adición de tests.
+build: Cambios que afectan el sistema de build o dependencias externas.
+ci: Cambios en la configuración de integración continua.
+perf: Cambios que mejoran el rendimiento.
+revert: Revertir un commit anterior.
+
 ## Actualización nestjs
 
 ```bash
