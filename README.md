@@ -19,6 +19,30 @@
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Dockerized 🐳_-blue.svg" alt="docker"/></a>
 </p>
 
+## Actualización nestjs
+
+```bash
+npm install @nestjs/core@latest @nestjs/common@latest @nestjs/platform-fastify@latest @nestjs/config@latest @nestjs/testing@latest @nestjs/cli@latest @nestjs/schematics@latest fastify@latest
+```
+
+## Se esta utilizando TypeOrm
+
+```bash
+npm install --save @nestjs/typeorm typeorm pg
+```
+
+## Usamos type model generator para generar las entidades apartir del .sql creado en <https://dbdiagram.io/>
+
+```bash
+npm install --save-dev typeorm-model-generator
+```
+
+## Creación de las entidades apartir de las sql creadas
+
+```bash
+npx typeorm-model-generator -h localhost -d silver_seguridad -u antonio -x francia15 -e postgres -o ./src/entity
+```
+
 ## 👀 Motivation
 
 When we start creating some new service based on NestJS most often we just use the Nest cli for starting a new service that already give us some convention and structure for our project. This is a good starting point however I was missing a couple of interesting things that almost all services should have to be ready to deploy to production like fully dockerized, ensuring coding conventions...

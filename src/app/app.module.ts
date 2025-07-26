@@ -7,9 +7,12 @@ import { LoggerModule } from "@/shared/logger/logger.module";
 
 import { UserModule } from "@/contexts/users/user.module";
 
+import { ConfigDBModule } from "../config/config-db.module";
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, cache: true }),
+    ConfigDBModule,
     LoggerModule,
     HealthModule,
     UserModule,
