@@ -8,6 +8,8 @@ import {
 
 import { AppModule } from "@/app/app.module";
 
+import { setupSwagger } from "./config/swagger.config";
+
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
@@ -15,8 +17,14 @@ async function bootstrap() {
   );
 
   app.setGlobalPrefix("api");
+
+  // Configuración de Swagger
+  setupSwagger(app);
+
   const configService = app.get(ConfigService);
   const port = configService.get<string>("PORT", "3000");
+
+  app.enableCors();
 
   await app.listen(port, "0.0.0.0");
 

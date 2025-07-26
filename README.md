@@ -25,6 +25,22 @@
 npm install @nestjs/core@latest @nestjs/common@latest @nestjs/platform-fastify@latest @nestjs/config@latest @nestjs/testing@latest @nestjs/cli@latest @nestjs/schematics@latest fastify@latest
 ```
 
+## Estamos utilizando documentación con swagger
+
+```bash
+npm install --save @nestjs/swagger swagger-ui-express
+
+npm install --save-dev @types/swagger-ui-express
+```
+
+## Para poder mostrar archivos estaticos despues de instalar swagger usando fastify
+
+```bash
+npm install @fastify/static
+```
+
+## Url para ver swagger <http://localhost:3000/swagger>
+
 ## Se esta utilizando TypeOrm
 
 ```bash
