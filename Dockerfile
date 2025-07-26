@@ -13,9 +13,11 @@ RUN npm install -g pnpm@9.14.2
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ".npmrc" && \
-    pnpm install --frozen-lockfile && \
-    rm -f .npmrc
+#RUN echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ".npmrc" && \
+#    pnpm install --frozen-lockfile && \
+#    rm -f .npmrc
+
+RUN pnpm install --frozen-lockfile
 
 COPY tsconfig*.json .
 COPY .swcrc .
